@@ -17,6 +17,10 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<lucene.version>4.8.1</lucene.version>
+		<opennlp.version>1.5.3</opennlp.version>
+		<stanfordnlp.version>3.3.1</stanfordnlp.version>
+		<clearnlp.version>2.0.2</clearnlp.version>
 	</properties>
 
 	<dependencies>
@@ -39,27 +43,27 @@
 		<dependency>
 			<groupId>org.apache.lucene</groupId>
 			<artifactId>lucene-core</artifactId>
-			<version>4.8.1</version>
+			<version>${lucene.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.lucene</groupId>
 			<artifactId>lucene-analyzers-common</artifactId>
-			<version>4.8.1</version>
+			<version>${lucene.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.lucene</groupId>
 			<artifactId>lucene-queryparser</artifactId>
-			<version>4.8.1</version>
+			<version>${lucene.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.opennlp</groupId>
 			<artifactId>opennlp-tools</artifactId>
-			<version>1.5.3</version>
+			<version>${opennlp.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>edu.stanford.nlp</groupId>
 			<artifactId>stanford-corenlp</artifactId>
-			<version>3.3.1</version>
+			<version>${stanfordnlp.version}</version>
 			<exclusions>
 				<exclusion>
 					<groupId>xml-apis</groupId>
@@ -70,14 +74,14 @@
 		<dependency>
 			<groupId>edu.stanford.nlp</groupId>
 			<artifactId>stanford-corenlp</artifactId>
-			<version>3.3.1</version>
+			<version>${stanfordnlp.version}</version>
 			<classifier>models</classifier>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.clearnlp</groupId>
 			<artifactId>clearnlp</artifactId>
-			<version>2.0.2</version>
+			<version>${clearnlp.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.clearnlp</groupId>
