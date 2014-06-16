@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>ClearNLP 2.0 properties</comment>
+	<entry key="pos.model">general-en</entry>
+	<entry key="dep.model">general-en</entry>
+	<entry key="pred.model">general-en</entry>
+	<entry key="role.model">general-en</entry>
+	<entry key="srl.model">general-en</entry>
+</properties>

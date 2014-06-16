@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>OpenNLP properties</comment>
+	<entry key="sent.model">E:/Resource/opennlp/en-sent.bin</entry>
+	<entry key="tok.model">E:/Resource/opennlp/en-token.bin</entry>
+	<entry key="pos.model">E:/Resource/opennlp/en-pos-maxent.bin</entry>
+	<entry key="chunk.model">E:/Resource/opennlp/en-chunker.bin</entry>
+	<entry key="parse.model">E:/Resource/opennlp/en-parser-chunking.bin</entry>
+	<entry key="ner.person.model">E:/Resource/opennlp/en-ner-person.bin</entry>
+	<entry key="ner.organization.model">E:/Resource/opennlp/en-ner-organization.bin</entry>
+	<entry key="ner.location.model">E:/Resource/opennlp/en-ner-location.bin</entry>
+	<entry key="ner.date.model">E:/Resource/opennlp/en-ner-date.bin</entry>
+	<entry key="ner.time.model">E:/Resource/opennlp/en-ner-time.bin</entry>
+	<entry key="ner.money.model">E:/Resource/opennlp/en-ner-money.bin</entry>
+	<entry key="ner.percentage.model">E:/Resource/opennlp/en-ner-percentage.bin</entry>
+</properties>

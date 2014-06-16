@@ -1,0 +1,125 @@
+-----------------------------------------------------------------
+
+lucene-*.jar
+
+URL: http://lucene.apache.org/core/
+
+Apache License 2.0
+
+-----------------------------------------------------------------
+
+stanford-corenlp-*.jar, jollyday-0.4.7.jar
+
+URL: http://nlp.stanford.edu/software/corenlp.shtml
+
+General Public License 2.0
+
+-----------------------------------------------------------------
+
+opennlp-*.jar
+
+URL: http://opennlp.apache.org/
+
+Apache License 2.0
+
+-----------------------------------------------------------------
+
+clearnlp-*.jar
+
+URL: https://github.com/clearnlp/clearnlp
+
+Apache License 2.0, BSD License
+
+-----------------------------------------------------------------
+
+xom-1.2.6.jar
+
+URL: http://www.xom.nu/
+
+License: http://www.xom.nu/license.xhtml
+
+GNU Lesser General Public License
+
+-----------------------------------------------------------------
+
+joda-time-2.1.jar
+
+URL: http://joda-time.sourceforge.net/
+
+License: http://joda-time.sourceforge.net/license.html
+
+Apache License 2.0
+
+-----------------------------------------------------------------
+
+ejml.jar
+
+URL: http://code.google.com/p/efficient-java-matrix-library/
+
+GNU Lesser General Public License
+
+-----------------------------------------------------------------
+
+jwnl-1.3.3.jar
+
+URL: http://sourceforge.net/projects/jwordnet/
+
+BSD License
+
+-----------------------------------------------------------------
+
+log4j-1.2.17.jar
+
+URL: http://logging.apache.org/log4j/1.2/
+
+Apache License 2.0
+
+-----------------------------------------------------------------
+
+java_toolkit-*.jar
+
+URL: http://github.com/chrisjihee/java_toolkit
+
+General Public License 2.0
+
+-----------------------------------------------------------------
+
+poi-*.jar
+
+URL: http://poi.apache.org/
+
+Apache License 2.0
+
+-----------------------------------------------------------------
+
+dom4j-*.jar
+
+URL: http://dom4j.sourceforge.net/
+
+BSD License
+
+-----------------------------------------------------------------
+
+xmlbeans-*.jar
+
+URL: http://xmlbeans.apache.org/
+
+Apache License 2.0
+
+-----------------------------------------------------------------
+
+javacsv-*.jar
+
+URL: http://sourceforge.net/projects/javacsv/
+
+GNU Lesser General Public License 2.0
+
+-----------------------------------------------------------------
+
+guava-*.jar
+
+URL: http://code.google.com/p/guava-libraries/
+
+Apache License 2.0
+
+-----------------------------------------------------------------

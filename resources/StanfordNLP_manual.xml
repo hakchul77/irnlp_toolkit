@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>StanfordNLP properties</comment>
+	<entry key="annotators">tokenize, ssplit, pos, lemma, ner, regexner, parse, dcoref</entry>
+	<entry key="pos.maxlen">120</entry>
+	<entry key="pos.model">E:/Resource/stanfordnlp/pos-tagger/english-left3words/english-left3words-distsim.tagger</entry>
+	<entry key="parse.maxlen">120</entry>
+	<entry key="parse.model">E:/Resource/stanfordnlp/lexparser/englishPCFG.ser.gz</entry>
+	<entry key="ssplit.eolonly">false</entry>
+	<entry key="ssplit.isOneSentence">false</entry>
+	<entry key="ner.applyNumericClassifiers">true</entry>
+	<entry key="ner.model">E:/Resource/stanfordnlp/ner/english.all.3class.distsim.crf.ser.gz,E:/Resource/stanfordnlp/ner/english.muc.7class.distsim.crf.ser.gz,E:/Resource/stanfordnlp/ner/english.conll.4class.distsim.crf.ser.gz</entry>
+	<entry key="ner.model.3class">E:/Resource/stanfordnlp/ner/english.all.3class.distsim.crf.ser.gz</entry>
+	<entry key="ner.model.7class">E:/Resource/stanfordnlp/ner/english.muc.7class.distsim.crf.ser.gz</entry>
+	<entry key="ner.model.MISCclass">E:/Resource/stanfordnlp/ner/english.conll.4class.distsim.crf.ser.gz</entry>
+	<entry key="ner.useSUTime">true</entry>
+	<entry key="regexner.mapping">E:/Resource/stanfordnlp/regexner/type_map_clean</entry>
+	<entry key="sutime.rules">E:/Resource/stanfordnlp/sutime/defs.sutime.txt,E:/Resource/stanfordnlp/sutime/english.sutime.txt,E:/Resource/stanfordnlp/sutime/english.holidays.sutime.txt</entry>
+	<entry key="sutime.teRelHeurLevel">MORE</entry>
+	<entry key="dcoref.animate">E:/Resource/stanfordnlp/dcoref/animate.unigrams.txt</entry>
+	<entry key="dcoref.big.gender.number">E:/Resource/stanfordnlp/dcoref/gender.data.gz</entry>
+	<entry key="dcoref.countries">E:/Resource/stanfordnlp/dcoref/countries</entry>
+	<entry key="dcoref.demonym">E:/Resource/stanfordnlp/dcoref/demonyms.txt</entry>
+	<entry key="dcoref.extra.gender">E:/Resource/stanfordnlp/dcoref/namegender.combine.txt</entry>
+	<entry key="dcoref.female">E:/Resource/stanfordnlp/dcoref/female.unigrams.txt</entry>
+	<entry key="dcoref.inanimate">E:/Resource/stanfordnlp/dcoref/inanimate.unigrams.txt</entry>
+	<entry key="dcoref.male">E:/Resource/stanfordnlp/dcoref/male.unigrams.txt</entry>
+	<entry key="dcoref.neutral">E:/Resource/stanfordnlp/dcoref/neutral.unigrams.txt</entry>
+	<entry key="dcoref.plural">E:/Resource/stanfordnlp/dcoref/plural.unigrams.txt</entry>
+	<entry key="dcoref.singleton.model">E:/Resource/stanfordnlp/dcoref/singleton.predictor.ser</entry>
+	<entry key="dcoref.singular">E:/Resource/stanfordnlp/dcoref/singular.unigrams.txt</entry>
+	<entry key="dcoref.states">E:/Resource/stanfordnlp/dcoref/state-abbreviations.txt</entry>
+	<entry key="dcoref.states.provinces">E:/Resource/stanfordnlp/dcoref/statesandprovinces</entry>
+	<entry key="gender.firstnames">E:/Resource/stanfordnlp/gender/first_name_map_small</entry>
+	<entry key="truecase.model">E:/Resource/stanfordnlp/truecase/truecasing.fast.caseless.qn.ser.gz</entry>
+</properties>

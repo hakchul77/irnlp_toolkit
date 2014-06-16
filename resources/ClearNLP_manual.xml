@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>ClearNLP 2.0 properties</comment>
+	<entry key="pos.model">E:/Resource/clearnlp/clearnlp-general-en-pos-1.1.zip</entry>
+	<entry key="dep.model">E:/Resource/clearnlp/clearnlp-general-en-dep-1.2.zip</entry>
+	<entry key="pred.model">E:/Resource/clearnlp/clearnlp-general-en-srl-1.1.zip</entry>
+	<entry key="role.model">E:/Resource/clearnlp/clearnlp-general-en-srl-1.1.zip</entry>
+	<entry key="srl.model">E:/Resource/clearnlp/clearnlp-general-en-srl-1.1.zip</entry>
+</properties>

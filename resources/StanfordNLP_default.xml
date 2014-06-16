@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>StanfordNLP properties</comment>
+	<entry key="annotators">tokenize, ssplit, pos, lemma, ner, regexner, parse, dcoref</entry>
+	<entry key="pos.maxlen">120</entry>
+	<entry key="pos.model">edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger</entry>
+	<entry key="parse.maxlen">120</entry>
+	<entry key="parse.model">edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz</entry>
+	<entry key="ner.useSUTime">true</entry>
+	<entry key="sutime.teRelHeurLevel">MORE</entry>
+</properties>
