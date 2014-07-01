@@ -16,7 +16,7 @@ import kr.jihee.java_toolkit.util.JString;
  * 
  * @author Jihee
  */
-public class DemoPOSTaggingK {
+public class POSTaggingK {
 
 	/**
 	 * Main function

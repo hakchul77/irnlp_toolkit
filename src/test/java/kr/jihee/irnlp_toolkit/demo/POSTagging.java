@@ -16,7 +16,7 @@ import edu.stanford.nlp.ling.TaggedWord;
  * 
  * @author Jihee
  */
-public class DemoPOSTagging {
+public class POSTagging {
 
 	/**
 	 * Main function
