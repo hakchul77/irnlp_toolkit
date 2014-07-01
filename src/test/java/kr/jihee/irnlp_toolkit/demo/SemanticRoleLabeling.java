@@ -53,7 +53,7 @@ public class SemanticRoleLabeling {
 				for (SRLNode dep : ClearNlpWrapper.getDependents(verb)) {
 					Map<String, Object> m = dep.toMap();
 					sb.append(String.format("  ->(Node) id=%d, form=%s, pos=%s, governor=%d, drel=%s",
-							m.get("id"), m.get("form"), m.get("pos"), m.get("governor"), m.get("drel")));
+						m.get("id"), m.get("form"), m.get("pos"), m.get("governor"), m.get("drel")));
 					if (m.get("srel") != null)
 						sb.append(String.format(", srel=%s, sfunc=%s", m.get("srel"), m.get("sfunc")));
 					sb.append("\n");
