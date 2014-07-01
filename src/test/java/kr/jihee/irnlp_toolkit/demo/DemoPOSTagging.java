@@ -1,12 +1,13 @@
 /**
  * Natural Language Processing package
  */
-package kr.jihee.irnlp_toolkit.nlp;
+package kr.jihee.irnlp_toolkit.demo;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import kr.jihee.irnlp_toolkit.Env;
+import kr.jihee.irnlp_toolkit.nlp.StanfordNlpWrapper;
 import edu.stanford.nlp.ling.HasWord;
 import edu.stanford.nlp.ling.TaggedWord;
 

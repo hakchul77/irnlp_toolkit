@@ -278,25 +278,6 @@ public class StanfordNlpWrapper {
 	}
 
 	/**
-	 * Transform an Annotation instance into a map of coreference clusters
-	 * 
-	 * @param annotation
-	 * @return
-	 */
-	public static Map<Integer, List<CorefMention>> toCoreferenceMap(Annotation annotation) {
-		HashMap<Integer, List<CorefMention>> corefs = new HashMap<Integer, List<CorefMention>>();
-		for (CorefChain chain : annotation.get(CorefChainAnnotation.class).values()) {
-			CorefMention m1 = chain.getRepresentativeMention();
-			corefs.put(m1.corefClusterID, new ArrayList<CorefMention>());
-			corefs.get(m1.corefClusterID).add(m1);
-			for (CorefMention m2 : chain.getMentionsInTextualOrder())
-				if (m2 != m1)
-					corefs.get(m2.corefClusterID).add(m2);
-		}
-		return corefs;
-	}
-
-	/**
 	 * Transform a parse tree into a format
 	 * 
 	 * @param tree
@@ -361,6 +342,25 @@ public class StanfordNlpWrapper {
 		if (resetRoots)
 			sgraph.resetRoots();
 		return sgraph;
+	}
+
+	/**
+	 * Transform an Annotation instance into a map of coreference clusters
+	 * 
+	 * @param annotation
+	 * @return
+	 */
+	public static Map<Integer, List<CorefMention>> toCoreferenceMap(Annotation annotation) {
+		HashMap<Integer, List<CorefMention>> corefs = new HashMap<Integer, List<CorefMention>>();
+		for (CorefChain chain : annotation.get(CorefChainAnnotation.class).values()) {
+			CorefMention m1 = chain.getRepresentativeMention();
+			corefs.put(m1.corefClusterID, new ArrayList<CorefMention>());
+			corefs.get(m1.corefClusterID).add(m1);
+			for (CorefMention m2 : chain.getMentionsInTextualOrder())
+				if (m2 != m1)
+					corefs.get(m2.corefClusterID).add(m2);
+		}
+		return corefs;
 	}
 
 	/**
