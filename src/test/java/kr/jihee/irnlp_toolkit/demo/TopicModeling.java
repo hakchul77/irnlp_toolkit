@@ -30,7 +30,7 @@ public class TopicModeling {
 		String keys_file = Env.SAMPLE_DIR + "keys.txt";
 		String docs_dir = Env.SAMPLE_DIR + "wikipedia";
 		int num_topics = 5;
-		int num_iterations = 1000;
+		int num_iterations = 10000;
 
 		// input
 		System.out.println("-Input--------------------------------------------------------------------------");
