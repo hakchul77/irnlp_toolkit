@@ -38,9 +38,9 @@ import edu.stanford.nlp.util.CoreMap;
  */
 public class TestStanfordNLP extends TestCase {
 
-	public static final boolean TEST_CONFIG = false;
+	public static final boolean TEST_CONFIG = true;
 	public static final boolean TEST_BASIC = false;
-	public static final boolean TEST_PIPELINE = true;
+	public static final boolean TEST_PIPELINE = false;
 	public static final boolean TEST_SUTIME = false;
 	public static final boolean TEST_UTILITY = false;
 

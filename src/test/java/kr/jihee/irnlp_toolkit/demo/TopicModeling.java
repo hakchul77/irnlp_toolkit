@@ -36,10 +36,10 @@ public class TopicModeling {
 		System.out.println("-Input--------------------------------------------------------------------------");
 		MalletLDAWrapper lda = new MalletLDAWrapper(keys_file);
 		lda.setInputData(docs_dir);
-		System.out.println(lda.data.size());
 
 		// clustering
 		System.out.println("-Clustering---------------------------------------------------------------------");
+		MalletLDAWrapper.DEFAULT_NUM_KEYWORDS = 50;
 		for (LDAResult result : lda.cluster(num_topics, num_iterations)) {
 			List<String> dists = new ArrayList<String>();
 			for (IDSorter scoredTopic : result.outputs)
