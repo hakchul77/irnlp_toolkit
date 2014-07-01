@@ -33,7 +33,11 @@ public class TimeExpressionNormalization {
 		nlp.loadTimeAnnotator();
 
 		// task run
+		System.out.println("-XML document-------------------------------------------------------------------");
 		JXml xml = new JXml(nlp.normalizeTime(text, date));
+		System.out.println(xml.toString());
+		
+		System.out.println("-TIMEX3 elements----------------------------------------------------------------");
 		for (Element timex : xml.findElements("DOC/TEXT/TIMEX3"))
 			System.out.println(JXml.toNodeString(timex));
 	}
