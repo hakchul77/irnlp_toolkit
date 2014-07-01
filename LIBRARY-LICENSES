@@ -8,6 +8,14 @@ Apache License 2.0
 
 -----------------------------------------------------------------
 
+mallet-*.jar
+
+URL: http://mallet.cs.umass.edu/
+
+Common Public License 1.0
+
+-----------------------------------------------------------------
+
 stanford-corenlp-*.jar, jollyday-0.4.7.jar
 
 URL: http://nlp.stanford.edu/software/corenlp.shtml

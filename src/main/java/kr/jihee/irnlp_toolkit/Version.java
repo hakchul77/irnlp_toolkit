@@ -8,7 +8,7 @@ package kr.jihee.irnlp_toolkit;
  */
 public enum Version {
 
-	UNKNOWN("unknown"), V0_7("0.7.3"), V0_8("0.8"), PREVIOUS(V0_7.ver), CURRENT(V0_8.ver);
+	UNKNOWN("unknown"), V0_7("0.7.3"), V0_8("0.8.1"), PREVIOUS(V0_7.ver), CURRENT(V0_8.ver);
 
 	private String ver;
 	private String project_name = "IRNLP_Toolkit";
