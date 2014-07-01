@@ -6,7 +6,6 @@ package kr.jihee.irnlp_toolkit.ml;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import junit.framework.TestCase;
@@ -77,10 +76,10 @@ public class TestMallet extends TestCase {
 		items.add(new JEntry("it", it_def));
 		items.add(new JEntry("fr", fr_def));
 		items.add(new JEntry("en", en_def));
-		
+
 		JEntry[] data = items.toArray(new JEntry[0]);
 		String keys_file = System.getProperty("user.home") + "/keys.txt";
-		
+
 		MalletLDAWrapper.DEFAULT_NUM_KEYWORDS = 20;
 		MalletLDAWrapper lda = new MalletLDAWrapper(keys_file);
 		lda.setInputData(data);
@@ -90,10 +89,10 @@ public class TestMallet extends TestCase {
 		assertEquals(true, keys_file == null || new File(keys_file).exists());
 		assertEquals(6, results.size());
 		for (LDAResult result : results) {
-			List<String> strs = new ArrayList<String>();
+			List<String> dists = new ArrayList<String>();
 			for (IDSorter scoredTopic : result.outputs)
-				strs.add(String.format("%d(%.4f)", scoredTopic.getID(), scoredTopic.getWeight()));
-			System.out.println(JString.join("\t", Arrays.asList(result.id.toString(), result.name, JString.join(", ", strs))));
+				dists.add(String.format("%d(%.4f)", scoredTopic.getID(), scoredTopic.getWeight()));
+			System.out.println(JString.join("\t", result.id, result.name, JString.join(", ", dists)));
 		}
 	}
 }
