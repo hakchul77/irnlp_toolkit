@@ -26,7 +26,7 @@ public class TopicModeling {
 	 * @throws Exception
 	 */
 	public static void main(String[] args) throws Exception {
-		// file setting
+		// setting
 		String keys_file = Env.SAMPLE_DIR + "keys.txt";
 		String docs_dir = Env.SAMPLE_DIR + "wikipedia";
 		int num_topics = 5;

@@ -21,7 +21,7 @@ public class SequenceTagging {
 	 * @throws Exception
 	 */
 	public static void main(String[] args) throws Exception {
-		// file setting
+		// setting
 		String train_file = Env.SAMPLE_DIR + "np_train.txt";
 		String test_file = Env.SAMPLE_DIR + "np_test.txt";
 		MalletCRFWrapper.DEFAULT_TARGET_PROCESSING = true;
