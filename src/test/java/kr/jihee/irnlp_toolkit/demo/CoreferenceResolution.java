@@ -14,7 +14,7 @@ import edu.stanford.nlp.dcoref.CorefChain.CorefMention;
 import edu.stanford.nlp.pipeline.Annotation;
 
 /**
- * Demo code for Dependency Parsing
+ * Demo code for Coreference Resolution
  * 
  * @author Jihee
  */
