@@ -82,14 +82,14 @@ public class TestStanfordNLP extends TestCase {
 		assertTrue(nlp.parser != null);
 
 		assertEquals(2, StanfordNlpWrapper.detect(text).size());
-		for (List<HasWord> toks : StanfordNlpWrapper.detect(text)) {
-			System.out.println("\n[Sentence] " + JString.join(" ", toks));
-			assertEquals(toks.size(), nlp.tag(toks).size());
-			System.out.println("  <Tagged> " + JString.join(" ", nlp.tag(toks)));
+		for (List<HasWord> words : StanfordNlpWrapper.detect(text)) {
+			System.out.println("\n[Sentence] " + JString.join(" ", words));
+			assertEquals(words.size(), nlp.tag(words).size());
+			System.out.println("  <Tagged> " + JString.join(" ", nlp.tag(words)));
 
-			JXml xml = new JXml(StanfordNlpWrapper.toTreeString(nlp.parse(toks), "xmlTree"));
+			JXml xml = new JXml(StanfordNlpWrapper.toTreeString(nlp.parse(words), "xmlTree"));
 			assertEquals(1, xml.findElements("ROOT/S/VP").size());
-			System.out.println("  <Parsed> " + StanfordNlpWrapper.toTreeString(nlp.parse(toks), "oneline"));
+			System.out.println("  <Parsed> " + StanfordNlpWrapper.toTreeString(nlp.parse(words), "oneline"));
 		}
 	}
 

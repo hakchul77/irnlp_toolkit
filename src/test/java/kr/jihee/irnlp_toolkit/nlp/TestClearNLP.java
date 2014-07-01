@@ -67,17 +67,17 @@ public class TestClearNLP extends TestCase {
 		assertTrue(nlp.parser != null);
 
 		assertEquals(2, nlp.detect(text).size());
-		for (List<String> toks : nlp.detect(text)) {
-			DEPTree units = NLPGetter.toDEPTree(toks);
-			System.out.println("\n[Sentence] " + JString.join(" ", toks));
-			assertEquals(toks.size(), ClearNlpWrapper.toTaggedWords(nlp.tag(units)).size());
+		for (List<String> words : nlp.detect(text)) {
+			DEPTree units = NLPGetter.toDEPTree(words);
+			System.out.println("\n[Sentence] " + JString.join(" ", words));
+			assertEquals(words.size(), ClearNlpWrapper.toTaggedWords(nlp.tag(units)).size());
 			System.out.println("  <Tagged> " + JString.join(" ", ClearNlpWrapper.toTaggedWords(nlp.tag(units))));
-			assertEquals(toks.size(), ClearNlpWrapper.toTypedDependencies(nlp.parse(units)).size());
+			assertEquals(words.size(), ClearNlpWrapper.toTypedDependencies(nlp.parse(units)).size());
 			System.out.println("  <Parsed> " + JString.join("; ", ClearNlpWrapper.toTypedDependencies(nlp.parse(units))));
 
 			System.out.println("-parsed SemanticGraph-----------------------------------------------------------");
 			SemanticGraph sgraph = StanfordNlpWrapper.toSemanticGraph(ClearNlpWrapper.toTypedDependencies(nlp.parse(units)), false);
-			assertEquals(toks.size(), JString.trimAndIndent(sgraph.toString(), 2).split("\n").length);
+			assertEquals(words.size(), JString.trimAndIndent(sgraph.toString(), 2).split("\n").length);
 			System.out.println(JString.trimAndIndent(sgraph.toString(), 2));
 		}
 	}
