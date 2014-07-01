@@ -41,7 +41,8 @@ public class CoreferenceResolution {
 			List<CorefMention> mentions = mention_map.get(id);
 			if (mentions.size() > 1)
 				for (CorefMention m : mentions)
-					System.out.println(JString.join("\t", id, m.mentionType, m.mentionSpan, m.sentNum, m.headIndex));
+					System.out.println(JString.join("\t", id, 
+							m.mentionType, m.mentionSpan, m.sentNum, m.headIndex));
 		}
 	}
 }
