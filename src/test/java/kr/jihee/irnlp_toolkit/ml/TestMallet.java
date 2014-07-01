@@ -1,5 +1,5 @@
 /**
- * Information Retrieval package
+ * Machine Learning package
  */
 package kr.jihee.irnlp_toolkit.ml;
 
@@ -55,6 +55,7 @@ public class TestMallet extends TestCase {
 		List<CRFResult> results = crf.test(1);
 		assertEquals(2, results.size());
 		for (CRFResult result : results) {
+			assertEquals(1, result.outputs.size());
 			System.out.println(result.input.toString().trim());
 			System.out.println(String.join(" ", result.outputs.get(0)));
 			System.out.println();

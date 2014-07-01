@@ -201,11 +201,11 @@ public class StanfordNlpWrapper {
 		return MaxentTagger.tokenizeText(new StringReader(text));
 	}
 
-	public ArrayList<TaggedWord> tag(String text) {
+	public List<TaggedWord> tag(String text) {
 		return tag(tokenize(text));
 	}
 
-	public ArrayList<TaggedWord> tag(List<? extends HasWord> words) {
+	public List<TaggedWord> tag(List<? extends HasWord> words) {
 		return tagger.tagSentence(words);
 	}
 

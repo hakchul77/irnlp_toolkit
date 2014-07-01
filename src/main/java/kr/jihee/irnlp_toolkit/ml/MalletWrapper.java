@@ -1,5 +1,5 @@
 /**
- * 
+ * Machine Learning package
  */
 package kr.jihee.irnlp_toolkit.ml;
 
@@ -136,21 +136,23 @@ public class MalletWrapper {
 		 * @param num_iterations
 		 * @return
 		 */
-		public void train(int num_iterations) {
-			model = new CRF(this.train_data.getPipe(), (Pipe) null);
-			for (int i = 0; i < model.numStates(); i++)
-				model.getState(i).setInitialWeight(Transducer.IMPOSSIBLE_WEIGHT);
-			String startName = model.addOrderNStates(this.train_data, new int[] { 1 }, null, DEFAULT_LABEL, Pattern.compile("\\s"), Pattern.compile(".*"), true);
-			model.getState(startName).setInitialWeight(0.0);
+		public Boolean train(Integer num_iterations) {
+			this.model = new CRF(this.train_data.getPipe(), (Pipe) null);
+			for (int i = 0; i < this.model.numStates(); i++)
+				this.model.getState(i).setInitialWeight(Transducer.IMPOSSIBLE_WEIGHT);
+			String startName = this.model.addOrderNStates(this.train_data, new int[] { 1 }, null, DEFAULT_LABEL, Pattern.compile("\\s"), Pattern.compile(".*"), true);
+			this.model.getState(startName).setInitialWeight(0.0);
 
-			CRFTrainerByLabelLikelihood crft = new CRFTrainerByLabelLikelihood(model);
+			CRFTrainerByLabelLikelihood crft = new CRFTrainerByLabelLikelihood(this.model);
 			crft.setGaussianPriorVariance(DEFAULT_PRIOR_VARIANCE);
 			crft.setUseSparseWeights(true);
 			crft.setUseSomeUnsupportedTrick(true);
 
-			for (int i = 1; i <= num_iterations; i++)
+			for (int i = 0; i < num_iterations; i++)
 				if (crft.train(this.train_data, 1))
 					break;
+
+			return this.model != null;
 		}
 
 		/**
@@ -159,7 +161,7 @@ public class MalletWrapper {
 		 * @return
 		 */
 		@SuppressWarnings("unchecked")
-		public List<CRFResult> test(int num_best) {
+		public List<CRFResult> test(Integer num_best) {
 			List<CRFResult> groups = new ArrayList<CRFResult>();
 			for (Instance instance : this.test_data) {
 				FeatureVectorSequence input = (FeatureVectorSequence) instance.getData();
