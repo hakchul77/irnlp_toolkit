@@ -21,7 +21,7 @@ public class PhraseChunking {
 	 */
 	public static void main(String[] args) throws Exception {
 		// data input
-		String text = "John likes very much an ice cream cake of the shop.";
+		String text = "John may like an ice cream cake of the shop very much.";
 
 		// model loading
 		OpenNlpWrapper nlp = new OpenNlpWrapper(Env.OPENNLP_CFG);
