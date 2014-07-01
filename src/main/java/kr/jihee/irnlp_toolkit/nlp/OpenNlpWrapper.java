@@ -138,7 +138,7 @@ public class OpenNlpWrapper {
 		return ParserTool.parseLine(sent, parser, k);
 	}
 
-	public ArrayList<Span> recognize(String[] toks) {
+	public List<Span> recognize(String[] toks) {
 		ArrayList<Span> spans = new ArrayList<Span>();
 		for (NameFinderME recognizer : recognizers)
 			for (Span s : recognizer.find(toks))

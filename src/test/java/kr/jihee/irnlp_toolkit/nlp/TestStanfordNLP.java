@@ -38,11 +38,11 @@ import edu.stanford.nlp.util.CoreMap;
  */
 public class TestStanfordNLP extends TestCase {
 
-	public static final boolean TEST_CONFIG = true;
-	public static final boolean TEST_BASIC = true;
-	public static final boolean TEST_PIPELINE = false;
-	public static final boolean TEST_SUTIME = true;
-	public static final boolean TEST_UTILITY = true;
+	public static final boolean TEST_CONFIG = false;
+	public static final boolean TEST_BASIC = false;
+	public static final boolean TEST_PIPELINE = true;
+	public static final boolean TEST_SUTIME = false;
+	public static final boolean TEST_UTILITY = false;
 
 	/**
 	 * Configuration file Test
@@ -107,7 +107,7 @@ public class TestStanfordNLP extends TestCase {
 		text += " It is the flagship subsidiary of the Samsung Group.";
 
 		StanfordNlpWrapper nlp = new StanfordNlpWrapper(Env.STANFORDNLP_CFG);
-		nlp.loadAll();
+		nlp.loadAll("tokenize, ssplit, pos, lemma, ner, regexner, parse, dcoref");
 		assertTrue(nlp.annotator != null);
 
 		Annotation annotation = nlp.annotate(text);
