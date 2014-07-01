@@ -28,7 +28,7 @@ import opennlp.tools.tokenize.TokenizerModel;
 import opennlp.tools.util.Span;
 
 /**
- * Wrapper of OpenNLP 1.5.3
+ * Wrapper of OpenNLP 1.5.3<br>
  * = URL : http://opennlp.apache.org/
  * 
  * @author Jihee
@@ -98,19 +98,19 @@ public class OpenNlpWrapper {
 		loadAll("ssplit, tokenize, pos, chunk, parse, ner");
 	}
 
-	public void loadAll(String annotators) throws IOException {
-		List<String> annotators2 = Arrays.asList(annotators.toLowerCase().replaceAll("\\s", "").split(","));
-		if (annotators2.contains("ssplit"))
+	public void loadAll(String annotator_spec) throws IOException {
+		List<String> annotators = Arrays.asList(annotator_spec.toLowerCase().replaceAll("\\s", "").split(","));
+		if (annotators.contains("ssplit"))
 			loadSentDetector();
-		if (annotators2.contains("tokenize"))
+		if (annotators.contains("tokenize"))
 			loadTokenizer();
-		if (annotators2.contains("pos"))
+		if (annotators.contains("pos"))
 			loadPosTagger();
-		if (annotators2.contains("chunk"))
+		if (annotators.contains("chunk"))
 			loadChunker();
-		if (annotators2.contains("parse"))
+		if (annotators.contains("parse"))
 			loadLexParser();
-		if (annotators2.contains("ner"))
+		if (annotators.contains("ner"))
 			loadEntityRecognizers();
 	}
 

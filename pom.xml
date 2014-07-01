@@ -3,12 +3,16 @@
 
 	<groupId>kr.jihee</groupId>
 	<artifactId>irnlp_toolkit</artifactId>
-	<version>0.8.1</version>
+	<version>0.8.2</version>
 	<packaging>jar</packaging>
 
 	<name>irnlp_toolkit</name>
 	<url>https://github.com/chrisjihee/irnlp_toolkit</url>
 	<description>This is a toolkit for IR and NLP applications.</description>
+	<organization>
+		<name>IR&amp;NLP Lab</name>
+		<url>http://ir.kaist.ac.kr/</url>
+	</organization>
 	<scm>
 		<url>https://github.com/chrisjihee/irnlp_toolkit</url>
 		<developerConnection>https://github.com/chrisjihee</developerConnection>
@@ -21,6 +25,8 @@
 		<opennlp.version>1.5.3</opennlp.version>
 		<stanfordnlp.version>3.3.1</stanfordnlp.version>
 		<clearnlp.version>2.0.2</clearnlp.version>
+		<hannanum.version>0.8.4</hannanum.version>
+		<mallet.version>2.0.7</mallet.version>
 	</properties>
 
 	<dependencies>
@@ -110,7 +116,12 @@
 		<dependency>
 			<groupId>cc.mallet</groupId>
 			<artifactId>mallet</artifactId>
-			<version>2.0.7</version>
+			<version>${mallet.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>kr.ac.kaist.swrc</groupId>
+			<artifactId>jhannanum</artifactId>
+			<version>${hannanum.version}</version>
 		</dependency>
 	</dependencies>
 
@@ -147,6 +158,9 @@
 						</goals>
 					</execution>
 				</executions>
+				<configuration>
+					<additionalparam>-Xdoclint:none</additionalparam>
+				</configuration>
 			</plugin>
 			<plugin>
 				<artifactId>maven-resources-plugin</artifactId>

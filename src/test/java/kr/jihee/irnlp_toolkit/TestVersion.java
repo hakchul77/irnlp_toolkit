@@ -19,7 +19,7 @@ public class TestVersion extends TestCase {
 	public void testVersion() {
 		System.out.println("\n----- testVersion() ------------------------------");
 
-		assertEquals("0.8", Version.CURRENT.toString());
+		assertEquals("0.8.2", Version.CURRENT.toString());
 		System.out.println(Version.CURRENT.getProjectVersion());
 	}
 }

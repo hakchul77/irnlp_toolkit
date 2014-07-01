@@ -16,7 +16,15 @@ Common Public License 1.0
 
 -----------------------------------------------------------------
 
-stanford-corenlp-*.jar, jollyday-0.4.7.jar
+jhannanum-*.jar
+
+URL: http://semanticweb.kaist.ac.kr/home/index.php/HanNanum
+
+General Public License 3.0
+
+-----------------------------------------------------------------
+
+stanford-corenlp-*.jar, jollyday-*.jar
 
 URL: http://nlp.stanford.edu/software/corenlp.shtml
 
@@ -40,27 +48,23 @@ Apache License 2.0, BSD License
 
 -----------------------------------------------------------------
 
-xom-1.2.6.jar
+xom-*.jar
 
 URL: http://www.xom.nu/
-
-License: http://www.xom.nu/license.xhtml
 
 GNU Lesser General Public License
 
 -----------------------------------------------------------------
 
-joda-time-2.1.jar
+joda-time-*.jar
 
 URL: http://joda-time.sourceforge.net/
-
-License: http://joda-time.sourceforge.net/license.html
 
 Apache License 2.0
 
 -----------------------------------------------------------------
 
-ejml.jar
+ejml-*.jar
 
 URL: http://code.google.com/p/efficient-java-matrix-library/
 
@@ -68,7 +72,7 @@ GNU Lesser General Public License
 
 -----------------------------------------------------------------
 
-jwnl-1.3.3.jar
+jwnl-*.jar
 
 URL: http://sourceforge.net/projects/jwordnet/
 
@@ -76,7 +80,7 @@ BSD License
 
 -----------------------------------------------------------------
 
-log4j-1.2.17.jar
+log4j-*.jar
 
 URL: http://logging.apache.org/log4j/1.2/
 

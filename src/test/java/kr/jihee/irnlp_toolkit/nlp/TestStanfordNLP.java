@@ -40,7 +40,7 @@ public class TestStanfordNLP extends TestCase {
 
 	public static final boolean TEST_CONFIG = true;
 	public static final boolean TEST_BASIC = true;
-	public static final boolean TEST_PIPELINE = true;
+	public static final boolean TEST_PIPELINE = false;
 	public static final boolean TEST_SUTIME = true;
 	public static final boolean TEST_UTILITY = true;
 

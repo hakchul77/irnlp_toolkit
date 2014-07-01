@@ -46,9 +46,8 @@ import edu.stanford.nlp.trees.TreeGraphNode;
 import edu.stanford.nlp.trees.TypedDependency;
 
 /**
- * Wrapper of ClearNLP 2.0.2
- * = URL : http://clearnlp.com/
- * = Memory : 2G+ (POS: 0.5G, DEP: 1G, SRL: 0.5G)
+ * Wrapper of Stanford CoreNLP 3.3.1<br>
+ * = URL : http://nlp.stanford.edu/software/corenlp.shtml
  * 
  * @author Jihee
  */
@@ -147,17 +146,17 @@ public class ClearNlpWrapper {
 		loadAll("tokenize, ssplit, pos, parse, srl");
 	}
 
-	public void loadAll(String annotators) throws IOException {
-		List<String> annotators2 = Arrays.asList(annotators.toLowerCase().replaceAll("\\s", "").split(","));
-		if (annotators2.contains("tokenize"))
+	public void loadAll(String annotator_spec) throws IOException {
+		List<String> annotators = Arrays.asList(annotator_spec.toLowerCase().replaceAll("\\s", "").split(","));
+		if (annotators.contains("tokenize"))
 			loadTokenizer();
-		if (annotators2.contains("ssplit"))
+		if (annotators.contains("ssplit"))
 			loadSentDetector();
-		if (annotators2.contains("pos"))
+		if (annotators.contains("pos"))
 			loadPosTagger();
-		if (annotators2.contains("parse"))
+		if (annotators.contains("parse"))
 			loadDepParser();
-		if (annotators2.contains("srl"))
+		if (annotators.contains("srl"))
 			loadSrlLabeler();
 	}
 

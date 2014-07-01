@@ -20,6 +20,7 @@ public class TestOpenNLP extends TestCase {
 
 	public static final boolean TEST_CONFIG = true;
 	public static final boolean TEST_BASIC = true;
+	public static final boolean TEST_ADVANCED = false;
 
 	/**
 	 * Configuration file Test
@@ -50,13 +51,12 @@ public class TestOpenNLP extends TestCase {
 		text += " It is the flagship subsidiary of the Samsung Group.";
 
 		OpenNlpWrapper nlp = new OpenNlpWrapper(Env.OPENNLP_CFG);
-		nlp.loadAll("ssplit, tokenize, pos, chunk, parse, ner");
+		nlp.loadAll("ssplit, tokenize, pos, chunk, parse");
 		assertTrue(nlp.detector != null);
 		assertTrue(nlp.tokenizer != null);
 		assertTrue(nlp.tagger != null);
 		assertTrue(nlp.chunker != null);
 		assertTrue(nlp.parser != null);
-		assertTrue(nlp.recognizers != null);
 
 		assertEquals(2, nlp.detect(text).length);
 		for (String sent : nlp.detect(text)) {
@@ -66,6 +66,32 @@ public class TestOpenNLP extends TestCase {
 			System.out.println("\n[Sentence] " + sent);
 			System.out.println("  <Chunked> " + OpenNlpWrapper.toChunkString(toks, tags, chunks));
 			System.out.println("  <Parsed> " + OpenNlpWrapper.toTreeString(nlp.parse(sent)));
+		}
+	}
+
+	/**
+	 * OpenNlpWrapper Test for advanced functions
+	 * 
+	 * @throws IOException
+	 */
+	public void testOpenNlpWrapperForAdvanced() throws IOException {
+		System.out.println("\n----- testOpenNlpWrapperForAdvanced() ------------------------------");
+		if (!TEST_ADVANCED)
+			return;
+
+		String text = "Samsung Electronics is a South Korean multinational electronics company headquartered in Suwon, South Korea.";
+		text += " It is the flagship subsidiary of the Samsung Group.";
+
+		OpenNlpWrapper nlp = new OpenNlpWrapper(Env.OPENNLP_CFG);
+		nlp.loadAll("ssplit, tokenize, ner");
+		assertTrue(nlp.detector != null);
+		assertTrue(nlp.tokenizer != null);
+		assertTrue(nlp.recognizers != null);
+
+		assertEquals(2, nlp.detect(text).length);
+		for (String sent : nlp.detect(text)) {
+			String[] toks = nlp.tokenize(sent);
+			System.out.println("\n[Sentence] " + sent);
 			System.out.println("  <Recognized> " + JString.join(", ", nlp.recognize(toks)));
 		}
 	}

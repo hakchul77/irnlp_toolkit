@@ -340,7 +340,9 @@ public class MalletWrapper {
 	}
 
 	/**
-	 * Class of a result item of CRF
+	 * Result item of CRF
+	 * 
+	 * @author Jihee
 	 */
 	public static class CRFResult {
 		public FeatureVectorSequence input;
@@ -353,7 +355,9 @@ public class MalletWrapper {
 	}
 
 	/**
-	 * Class of a result item of LDA
+	 * Result item of LDA
+	 * 
+	 * @author Jihee
 	 */
 	public static class LDAResult {
 		public Integer id;
@@ -372,7 +376,9 @@ public class MalletWrapper {
 	}
 
 	/**
-	 * Class of an iterator of JEntry array
+	 * Iterator of JEntry array
+	 * 
+	 * @author Jihee
 	 */
 	public static class JEntryArrayIterator implements Iterator<Instance> {
 		JEntry[] data;

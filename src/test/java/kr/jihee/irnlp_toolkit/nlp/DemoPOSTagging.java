@@ -11,7 +11,7 @@ import edu.stanford.nlp.ling.HasWord;
 import edu.stanford.nlp.ling.TaggedWord;
 
 /**
- * Unit test for functions using StanfordNLP
+ * Demo code for POS Tagging
  * 
  * @author Jihee
  */

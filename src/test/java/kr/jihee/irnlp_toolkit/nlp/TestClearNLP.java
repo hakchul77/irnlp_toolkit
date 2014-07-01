@@ -29,7 +29,7 @@ public class TestClearNLP extends TestCase {
 
 	public static final boolean TEST_CONFIG = true;
 	public static final boolean TEST_BASIC = false;
-	public static final boolean TEST_SRL = true;
+	public static final boolean TEST_ADVANCED = false;
 
 	/**
 	 * Configuration file Test
@@ -83,13 +83,13 @@ public class TestClearNLP extends TestCase {
 	}
 
 	/**
-	 * ClearNlpWrapper Test for SRL functions
+	 * ClearNlpWrapper Test for advanced functions
 	 * 
 	 * @throws IOException
 	 */
-	public void testClearNlpWrapperForSRL() throws IOException {
-		System.out.println("\n----- testClearNlpWrapperForSRL() ------------------------------");
-		if (!TEST_SRL)
+	public void testClearNlpWrapperForAdvanced() throws IOException {
+		System.out.println("\n----- testClearNlpWrapperForAdvanced() ------------------------------");
+		if (!TEST_ADVANCED)
 			return;
 
 		String text = "Samsung Electronics is a South Korean multinational electronics company in Suwon, South Korea.";

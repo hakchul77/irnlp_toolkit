@@ -65,7 +65,7 @@ import edu.stanford.nlp.util.Filters;
 import edu.stanford.nlp.util.ScoredObject;
 
 /**
- * Wrapper of Stanford CoreNLP 3.3.1
+ * Wrapper of Stanford CoreNLP 3.3.1<br>
  * = URL : http://nlp.stanford.edu/software/corenlp.shtml
  * 
  * @author Jihee
@@ -183,8 +183,8 @@ public class StanfordNlpWrapper {
 		annotator = new StanfordCoreNLP(prop);
 	}
 
-	public void loadAll(String annotators) {
-		prop.setProperty("annotators", annotators);
+	public void loadAll(String annotator_spec) {
+		prop.setProperty("annotators", annotator_spec);
 		annotator = new StanfordCoreNLP(prop);
 	}
 
@@ -559,8 +559,10 @@ public class StanfordNlpWrapper {
 	 * Find a head index between beginning index and ending index
 	 * 
 	 * @param sentence
-	 * @param beginIndex beginning index (0-based including index)
-	 * @param endIndex ending index (0-based non-including index)
+	 * @param beginIndex
+	 *            beginning index (0-based including index)
+	 * @param endIndex
+	 *            ending index (0-based non-including index)
 	 * @return head index (0-based index)
 	 */
 	public static Integer findHeadBetween(CoreMap sentence, int beginIndex, int endIndex) {
