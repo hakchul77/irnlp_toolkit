@@ -4,6 +4,7 @@
 package kr.jihee.irnlp_toolkit.demo;
 
 import java.util.List;
+import java.util.Map;
 
 import kr.jihee.irnlp_toolkit.Env;
 import kr.jihee.irnlp_toolkit.nlp.ClearNlpWrapper;
@@ -41,16 +42,22 @@ public class SemanticRoleLabeling {
 			units = nlp.tag(units);
 			units = nlp.parse(units);
 			units = nlp.label(units);
-			
+
 			System.out.println("-toStringSRL--------------------------------------------------------------------");
 			System.out.println(units.toStringSRL());
-			
+
 			System.out.println("-dependent Nodes----------------------------------------------------------------");
 			StringBuffer sb = new StringBuffer();
 			for (DEPNode verb : ClearNlpWrapper.getAllVerbs(units)) {
 				sb.append("->(Verb) " + ClearNlpWrapper.toTaggedWord(verb) + "\n");
-				for (SRLNode dep : ClearNlpWrapper.getDependents(verb))
-					sb.append("  ->(Node) " + dep + "\n");
+				for (SRLNode dep : ClearNlpWrapper.getDependents(verb)) {
+					Map<String, Object> m = dep.toMap();
+					sb.append(String.format("  ->(Node) id=%d, form=%s, pos=%s, governor=%d, drel=%s",
+							m.get("id"), m.get("form"), m.get("pos"), m.get("governor"), m.get("drel")));
+					if (m.get("srel") != null)
+						sb.append(String.format(", srel=%s, sfunc=%s", m.get("srel"), m.get("sfunc")));
+					sb.append("\n");
+				}
 			}
 			System.out.println(JString.trimAndIndent(sb.toString(), 2));
 		}
