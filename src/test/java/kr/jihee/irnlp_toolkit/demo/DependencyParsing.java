@@ -25,7 +25,7 @@ public class DependencyParsing {
 	 */
 	public static void main(String[] args) throws Exception {
 		// data input
-		String text = "John likes ice cream cakes of the shop very much.";
+		String text = "John may like an ice cream cake of the shop very much.";
 
 		// model loading
 		StanfordNlpWrapper nlp = new StanfordNlpWrapper(Env.STANFORDNLP_CFG);
