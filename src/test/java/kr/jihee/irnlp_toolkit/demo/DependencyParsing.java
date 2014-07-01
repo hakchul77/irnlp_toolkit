@@ -11,7 +11,7 @@ import edu.stanford.nlp.semgraph.SemanticGraphCoreAnnotations.BasicDependenciesA
 import edu.stanford.nlp.util.CoreMap;
 
 /**
- * Demo code for Constituency Parsing
+ * Demo code for Dependency Parsing
  * 
  * @author Jihee
  */
