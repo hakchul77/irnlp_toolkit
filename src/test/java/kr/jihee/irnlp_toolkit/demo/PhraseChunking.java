@@ -21,7 +21,7 @@ public class PhraseChunking {
 	 */
 	public static void main(String[] args) throws Exception {
 		// data input
-		String text = "Samsung Electronics is a South Korean multinational electronics company headquartered in Suwon, South Korea.";
+		String text = "Samsung Electronics is a South Korean multinational electronics company.";
 
 		// model loading
 		OpenNlpWrapper nlp = new OpenNlpWrapper(Env.OPENNLP_CFG);
