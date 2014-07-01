@@ -21,7 +21,7 @@ public class PhraseChunking {
 	 */
 	public static void main(String[] args) throws Exception {
 		// data input
-		String text = "Samsung Electronics is a multinational electronics company in South Korea.";
+		String text = "John likes very much an ice cream cake of the shop.";
 
 		// model loading
 		OpenNlpWrapper nlp = new OpenNlpWrapper(Env.OPENNLP_CFG);
