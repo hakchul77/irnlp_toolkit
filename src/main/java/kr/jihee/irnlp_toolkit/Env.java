@@ -12,6 +12,7 @@ public class Env {
 	public static String STANFORDNLP_CFG = "resources/StanfordNLP_default.xml";
 	public static String CLEARNLP_CFG = "resources/ClearNLP_default.xml";
 	public static String HANNANUM_CFG = "resources/Hannanum_manual.xml";
+	public static String SAMPLE_DIR = "resources/sample/";
 
 	public static double LUCENE_MEM = 256;
 }
