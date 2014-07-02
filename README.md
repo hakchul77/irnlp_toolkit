@@ -11,4 +11,4 @@ This is a toolkit for IR and NLP applications.
 
 #### Test Code
 * [All test codes](../../tree/master/src/test/java/kr/jihee/irnlp_toolkit)
-* [Demo codes for Lecture](../../tree/master/src/test/java/kr/jihee/irnlp_toolkit/demo)
+* [All demo codes](../../tree/master/src/test/java/kr/jihee/irnlp_toolkit/demo)
