@@ -10,4 +10,5 @@ This is a toolkit for IR and NLP applications.
 | 0.7      | 2014.04.28 | Initial public release |
 
 #### Test Code
-* [Test Source](../../tree/master/src/test/java/kr/jihee/irnlp_toolkit)
+* [All test codes](../../tree/master/src/test/java/kr/jihee/irnlp_toolkit)
+* [Demo codes for Lecture](../../tree/master/src/test/java/kr/jihee/irnlp_toolkit/demo)
